@@ -1,0 +1,14 @@
+<div class="col-md-2"></div>
+<div class="col-md-8">
+  <h1>How old are they?</h1>
+
+  <form ng-submit="next()">
+    <div ng-repeat="person in people track by $index">
+      {{ person['name'] }}
+      <input type="number" ng-model="person['age']" class="form-control" placeholder="Age" />
+    </div>
+
+    <input type="submit" class="btn btn-success" ng-click="next()" value="Next"></input>
+  </form>
+</div>
+<div class="col-md-2"></div>
