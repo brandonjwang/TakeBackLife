@@ -1,29 +1,30 @@
 
 var TblApp = angular.module('TblApp',['ngRoute'])
   .config(function($routeProvider) {
+    var baseUrl = '/dookehster/TakeBackLife/master/';
     $routeProvider
       .when('/', {
-        templateUrl: '/takebacklife/prelude/prelude.html',
+        templateUrl: baseUrl + 'prelude/prelude.html',
         controller: 'PreludeController'
       })
       .when('/who/', {
-        templateUrl: '/takebacklife/who/who.html',
+        templateUrl: baseUrl + 'who/who.html',
         controller: 'WhoController'
       })
       .when('/howold/', {
-        templateUrl: '/takebacklife/howold/howold.html',
+        templateUrl: baseUrl + 'howold/howold.html',
         controller: 'HowOldController'
       })
       .when('/whatrelationship/', {
-        templateUrl: '/takebacklife/whatrelationship/whatrelationship.html',
+        templateUrl: baseUrl + 'whatrelationship/whatrelationship.html',
         controller: 'WhatRelationshipController'
       })
       .when('/whereyou/', {
-        templateUrl: '/takebacklife/whereyou/whereyou.html',
+        templateUrl: baseUrl + 'whereyou/whereyou.html',
         controller: 'WhereYouController'
       })
       .when('/map/', {
-        templateUrl: '/takebacklife/map/map.html',
+        templateUrl: baseUrl + 'map/map.html',
         controller: 'MapController'
       })
       .otherwise({redirectTo: '/'});
