@@ -1,13 +1,15 @@
 <div class="col-md-2"></div>
 <div class="col-md-8">
-  <h1>Who are the 5 most important people in your life?</h1>
+  <h1>In order, who are the 5 most important people in your life?</h1>
+  <p>Make sure that you put yourself down.</p>
 
   <form ng-submit="next()">
     <div ng-repeat="person in people track by $index">
-      <input type="text" ng-model="person['name']" class="form-control" placeholder="Name" />
+      <input ng-if="$index==0" type="text" ng-model="person['name']" class="form-control" placeholder="Your Name" />
+      <input ng-if="$index!=0" type="text" ng-model="person['name']" class="form-control" placeholder="Name" />
     </div>
 
-    <input type="submit" class="btn btn-success" ng-click="next()" value="Next"></input>
+    <input type="submit" class="btn btn-success" value="Next"></input>
   </form>
 </div>
 <div class="col-md-2"></div>

@@ -1,0 +1,18 @@
+<div class="col-md-2"></div>
+<div class="col-md-8">
+  <h1>This is your life map you've put together</h1>
+  <table class="table table-striped">
+    <tr>
+      <th>Years in the future</th>
+      <th ng-repeat="year in years">{{ year }}</th>
+    </tr>
+    <tr ng-repeat="person in people">
+      <td>{{ person.name }}</td>
+      <td ng-repeat="year in years">
+        {{ person['where'][years.indexOf(year)] }}<br />
+        {{ person['relationship'][years.indexOf(year)] }}
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="col-md-2"></div>

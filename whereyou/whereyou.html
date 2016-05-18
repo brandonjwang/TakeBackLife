@@ -1,0 +1,13 @@
+<div class="col-md-2"></div>
+<div class="col-md-8">
+  <form ng-submit="next()">
+    <div ng-repeat="year in years" ng-show="year==years[curYearIndex]">
+      <h1>You're {{ year }} year(s) in the future at {{ year + person['age'] }} years old. Where do you want to be?</h1>
+      <p>For example: Fun, loving marriage. Fluent in Mandarin. No kids yet. Net worth $X. Spending an hour a day listening to opera.</p>
+      <p>It is also perfectly acceptable to write "I'm not sure". This is a question worth thinking deeply about.</p>
+      <input type="text" ng-model="person['where'][curYearIndex]" class="form-control" placeholder="Where?" />
+    </div>
+    <input type="submit" class="btn btn-success" value="Next" />
+  </form>
+</div>
+<div class="col-md-2"></div>
